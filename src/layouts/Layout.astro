@@ -1,0 +1,59 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions/>
+  </head>
+  <body class="pt-12 overflow-y-scroll">
+    <Header />
+    <slot />
+    <Footer/>
+    <style is:global>
+      html {
+        font-family: system-ui, sans-serif;
+        background: #191919;
+        background-size: 224px;
+        color-scheme: dark light;
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 2px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #191919;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #707070;
+				border-radius: 100px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      p{
+        font-size: 1.125rem /* 18px */;
+        line-height: 1.75rem /* 28px */;
+        font-weight: 300;
+        text-wrap: pretty;
+        line-height: 1.5rem /* 24px */;
+        color: #b3b3b3;
+      }
+    </style>
+  </body>
+</html>

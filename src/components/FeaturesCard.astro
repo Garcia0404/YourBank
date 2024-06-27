@@ -1,0 +1,19 @@
+---
+interface Props {
+  title:string
+  content:string
+}
+const {title,content} = Astro.props as Props
+---
+
+<article class="bg-gray/11 border border-gray/15 p-6 sm:p-9 flex flex-col gap-5 rounded-xl group/edit hover:bg-gray/15">
+  <div class="flex items-center justify-between">   
+    <h3 class="text-xl">{title}</h3>
+    <span class="transition-all group-hover/edit:translate-x-1.5 group-hover/edit:-translate-y-1.5">
+      <svg width="18" height="18" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.50007 19.9166L19.9167 1.49994M19.9167 1.49994V19.1799M19.9167 1.49994L2.23673 1.49994" stroke="#CAFF33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </div>
+  <p>{content}</p>
+</article>

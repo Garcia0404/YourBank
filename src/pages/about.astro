@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro"
+let ok = false
+---
+
+<Layout title="about astro">
+  <main class:list={[
+    "text-white",
+    {
+      'bg-red-600':!ok,
+      'bg-green-600':ok
+    }
+  ]}>
+    Esta es la página del about
+  </main>
+</Layout>
