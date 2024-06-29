@@ -4,6 +4,7 @@ import ProductsCard from "../components/ProductsCard.astro";
 import FAQCard from "../components/FAQCard.astro";
 import Layout from "../layouts/Layout.astro";
 import TestimonialsCard from "../components/TestimonialsCard.astro";
+import EndCard from "../components/EndCard.astro";
 ---
 
 <Layout title="YourBank">
@@ -410,21 +411,7 @@ import TestimonialsCard from "../components/TestimonialsCard.astro";
       </div>
     </div>
   </section>
-  <section class="bg-gray/11 border border-gray/15 rounded-xl mb-20 lg:mb-32 p-16 flex flex-col sm:flex-row items-center gap-8 sm:gap-20 relative max-w-7xl xl:mx-auto px-5 overflow-hidden mx-5">
-    <div class='absolute top-0 left-0'>
-      <img src='/points.svg' alt='points'/>
-    </div>
-    <div class="text-center sm:text-start">
-      <h2 class="text-3xl mobile:text-4xl font-medium text-balance mb-5">
-        <span>Start your financial journey with</span>
-        <span class="text-green/60">YourBank today!</span>
-      </h2>
-      <p>
-        Ready to take control of your finances? Join YourBank now, and let us help you achieve your financial goals with our tailored solutions and exceptional customer service.
-      </p>
-    </div>
-    <button class="bg-green/60 px-3 mobile:px-6 py-4 rounded-full sm:text-lg text-gray/11 font-normal whitespace-nowrap h-min">Open Account</button>
-  </section>
+  <EndCard/>
   <style>
     .faq::after {
       content: "";

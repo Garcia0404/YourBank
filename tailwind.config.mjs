@@ -12,6 +12,7 @@ export default {
 		},
 		colors:{
 			'green/60':'#CAFF33',
+			'gray/30':'#4C4C4D',
 			'gray/11':'#1c1c1c',
 			'gray/10':'#191919',
 			'gray/15':'#262626',

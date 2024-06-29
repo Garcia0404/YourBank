@@ -1,0 +1,25 @@
+---
+interface Props {
+  title?: string;
+  titleGreen?: string;
+  reverse?:boolean;
+}
+const { title, titleGreen,reverse=false } = Astro.props as Props;
+---
+
+<div class="text-center sm:text-start">
+  <h2 class="text-4xl font-medium mb-3">
+    {reverse && 
+      <span class="text-green/60">{titleGreen}</span>
+    }
+    {title && 
+      <span>{title}</span>
+    }
+    {(titleGreen && !reverse) && 
+      <span class="text-green/60">{titleGreen}</span>
+    }
+  </h2>
+  <p>
+    <slot />
+  </p>
+</div>

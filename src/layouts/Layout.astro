@@ -22,7 +22,7 @@ const { title } = Astro.props;
     <ViewTransitions/>
   </head>
   <body class="pt-12 overflow-y-scroll">
-    <Header />
+    <Header page={title}/>
     <slot />
     <Footer/>
     <style is:global>
