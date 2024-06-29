@@ -2,6 +2,8 @@
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { NavbarMobile } from "../components/NavbarMobile";
+
 
 interface Props {
   title: string;
@@ -19,14 +21,16 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions/>
+    <ViewTransitions />
   </head>
   <body class="pt-12 overflow-y-scroll">
-    <Header page={title}/>
+    <Header page={title} />
+    <NavbarMobile client:visible/>
     <slot />
-    <Footer/>
+    <Footer />
     <style is:global>
       html {
+        color: white;
         font-family: system-ui, sans-serif;
         background: #191919;
         background-size: 224px;
@@ -41,12 +45,12 @@ const { title } = Astro.props;
       }
       ::-webkit-scrollbar-thumb {
         background: #707070;
-				border-radius: 100px;
+        border-radius: 100px;
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #555;
       }
-      p{
+      p {
         font-size: 1.125rem /* 18px */;
         line-height: 1.75rem /* 28px */;
         font-weight: 300;

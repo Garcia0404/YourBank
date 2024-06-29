@@ -11,6 +11,8 @@ export default {
 			'2xl':'1536px'
 		},
 		colors:{
+			'white':'#f2f2f2',
+			'black':'#000',
 			'green/60':'#CAFF33',
 			'gray/30':'#4C4C4D',
 			'gray/11':'#1c1c1c',
