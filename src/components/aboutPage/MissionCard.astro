@@ -1,0 +1,92 @@
+---
+  interface Props {
+    img:string
+    title:string
+    reverse?:boolean
+  }
+  const {img,title,reverse=false} = Astro.props as Props
+---
+
+<article class:list={[
+  "grid smTablet:grid-cols-2 items-center gap-7 lg:gap-10",
+  {
+    "lg:-translate-y-10 xl:-translate-y-24":reverse
+  }
+]}>
+  {
+    reverse &&
+    <div class="text-center sm:text-start">
+      <h3 class="text-3xl font-medium mb-4">{title}</h3>
+      <p>
+        <slot/>
+      </p>
+    </div>
+  }
+  <picture class="overflow-hidden max-smTablet:row-start-1 max-smTablet:row-end-2 max-h-[580px] border-green relative border-b border-b-green/60 smTablet:border-none">
+    <span class="relative overflow-hidden">
+      <img
+        class="px-5 pt-5 lg:px-16 lg:pt-16 border border-gray/15 rounded-tl-[40px] rounded-tr-[40px] md:rounded-b-xl z-50"
+        width="100%"
+        height="auto"
+        src={`${img}.svg`}
+        alt="mision_image"
+      />
+      <span class="absolute top-0 left-0 -z-50 w-full overflow-hidden">
+        <img
+          class="scale-125 lg:scale-100"
+          width="100%"
+          height="auto"
+          src="/aboutPage/misionVision/points.svg"
+          alt="points"
+        />
+      </span>
+    </span>
+  </picture>
+  {
+    !reverse &&
+    <div class="text-center sm:text-start">
+      <h3 class="text-3xl font-medium mb-4">{title}</h3>
+      <p>
+        <slot/>
+      </p>
+    </div>
+  }
+  {
+    (!reverse) && 
+    <style>
+    .border-green::after{
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 0;
+      background: #CAFF33;
+      width: 1px;
+      height: 200px;
+    }
+    @media (width>700px) {
+      .border-green::after{
+        content:'';
+      }
+    }
+    </style>
+  }
+  {
+    (reverse) && 
+    <style>
+    .border-green::after{
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+      background: #CAFF33;
+      width: 1px;
+      height: 200px;
+    }
+    @media (width>700px) {
+      .border-green::after{
+        content:'';
+      }
+    }
+    </style>
+  }
+</article>

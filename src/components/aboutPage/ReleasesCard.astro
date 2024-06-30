@@ -1,0 +1,22 @@
+---
+interface Props {
+  img:string
+  title:string
+  date:string
+}
+const { img,title,date } = Astro.props as Props
+---
+
+<article class="bg-gray/11 p-5 rounded-t-[36px] rounded-b-xl border border-gray/15 flex flex-col">
+  <picture>
+    <img width="100%" height="auto" src={`${img}.svg`} alt={title}>
+  </picture>
+  <h3 class="text-xl md:text-2xl mt-6">{title}</h3>
+  <div class="flex gap-2 mb-6 mt-3 text-[13px] mobile:text-base">
+    <span class="bg-gray/10 border text-gray/70 border-gray/15 py-2 px-4 rounded-full w-max whitespace-nowrap">Location: India</span>
+    <span class="bg-gray/10 border text-gray/70 border-gray/15 py-2 px-4 rounded-full w-max whitespace-nowrap">Date: {date}</span>
+  </div>
+  <p>
+    <slot/>
+  </p>
+</article>

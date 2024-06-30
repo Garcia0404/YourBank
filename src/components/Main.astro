@@ -1,0 +1,33 @@
+---
+  interface Props {
+    img:string
+    title:string
+    titleGreen:string
+    title2?:string
+    head?:boolean
+  }
+  const {img,title,titleGreen,title2,head=false} = Astro.props as Props
+---
+<main class="max-w-7xl p-5 lg:p-10 bg-gray/11 rounded-2xl m-5 xl:mx-auto mt-10 relative">
+  <span class="absolute top-0 right-0 lg:w-96">
+    <img width="100%" height="auto" src="/careersPage/main/abstractDesign.svg" alt="abstractDesign">
+  </span>
+  <div class="relative flex flex-col md:grid md:grid-cols-12">
+    <div class="md:min-w-max flex-1 row-start-1 row-end-3 col-start-5 col-end-13">
+      <img class="max-h-[650px]" width="100%" height="auto" src={`${img}.svg`} alt="image">
+    </div>
+    <div class="bg-gray/10 p-5 sm:p-6 lg:p-16 rounded-2xl md:rounded-tr-none md:rounded-br-[60px] text-center md:text-start -translate-y-8 md:translate-y-0 col-start-1 col-end-7 row-start-1 row-end-2">
+      { head &&
+        <span class="text-xl block">Welcome To YourBank</span>
+      }
+      <h1 class="text-3xl lg:text-5xl mb-3 lg:mb-6 font-medium lg:leading-tight">
+        <span>{title} </span>
+        <span class="text-green/60">{titleGreen}</span>
+        <span>{title2}</span>
+      </h1>
+      <p>
+        <slot/>
+      </p>
+    </div>
+  </div>
+</main>

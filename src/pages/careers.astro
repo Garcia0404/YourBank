@@ -6,28 +6,15 @@ import BenefitsCard from "../components/careersPage/BenefitsCard.astro"
 import JobsOpeningsCard from "../components/careersPage/JobsOpeningsCard.astro"
 import ValuesCard from "../components/careersPage/ValuesCard.astro"
 import Layout from "../layouts/Layout.astro"
+import Main from "../components/Main.astro"
+import Section from "../components/Section.astro"
 ---
 
 <Layout title="Careers">
-  <main class="max-w-7xl p-5 bg-gray/11 rounded-2xl m-5 xl:mx-auto mt-10 relative">
-    <span class="absolute top-0 right-0 lg:w-96">
-      <img width="100%" height="auto" src="/careersPage/main/abstractDesign.svg" alt="abstractDesign">
-    </span>
-    <div class="relative flex flex-col md:grid md:grid-cols-12">
-      <div class="md:min-w-max flex-1 row-start-1 row-end-3 col-start-5 col-end-13">
-        <img width="100%" height="auto" src="/careersPage/main/image.svg" alt="image">
-      </div>
-      <div class="bg-gray/10 p-5 sm:p-6 lg:p-16 rounded-2xl md:rounded-tr-none md:rounded-br-[60px] text-center md:text-start -translate-y-10 md:translate-y-0 col-start-1 col-end-7 row-start-1 row-end-2">
-        <h1 class="text-3xl lg:text-5xl mb-3 lg:mb-6 font-medium">
-          <span>Welcome to </span>
-          <span class="text-green/60">YourBank</span>
-          <span>Careers!</span>
-        </h1>
-        <p>Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking.</p>
-      </div>
-    </div>
-  </main>
-  <section class="max-w-7xl m-5 mt-20 xl:mx-auto">
+  <Main img="/careersPage/main/image" title="Welcome to" titleGreen="YourBank" title2="Careers!">
+    Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking.
+  </Main>
+  <Section>
     <SectionHead title="Our" titleGreen="Values">
       At YourBank, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation. These values define our culture and shape the way we work together to achieve our goals.
     </SectionHead>
@@ -43,8 +30,8 @@ import Layout from "../layouts/Layout.astro"
       <ValuesCard title="Innovation">
         We embrace change and constantly seek innovative solutions to meet the evolving needs of our customers. We encourage our employees to think creatively, challenge conventions, and explore new ideas to drive the future of banking.      </ValuesCard>
     </div>
-  </section>
-  <section class="max-w-7xl m-5 mt-20 xl:mx-auto">
+  </Section>
+  <Section>
     <SectionHead title="Our" titleGreen="Benefits">
       At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth.</SectionHead>
     <div class="mt-12 grid md:grid-cols-2 gap-12">
@@ -58,8 +45,8 @@ import Layout from "../layouts/Layout.astro"
       <BenefitsCard title="Work-Life Balance" svg="worklifeBalance">
         We understand the importance of maintaining a healthy work-life balance. YourBank offers flexible work arrangements, paid time off, parental leave, and other programs that support employees in managing their personal and professional commitments.</BenefitsCard>
     </div>
-  </section>
-  <section class="max-w-7xl m-5 mt-20 xl:mx-auto">
+  </Section>
+  <Section>
     <SectionHead titleGreen="Job Openings">
       Explore exciting job openings at YourBank, where we value talent, innovation, and a passion for customer service. Join our team and be part of shaping a brighter future in the banking industry.</SectionHead>
     <div class="mt-12 grid lg:grid-cols-2 gap-6">
@@ -89,8 +76,8 @@ import Layout from "../layouts/Layout.astro"
       ]}>
         As an IT Security Specialist at YourBank, you will be responsible for ensuring the security and integrity of our information systems. You will develop and implement security protocols, conduct vulnerability assessments, and respond to security incidents. We are seeking individuals with a strong technical background, knowledge of cybersecurity best practices, and a commitment to maintaining the confidentiality of customer data.      </JobsOpeningsCard>
     </div>
-  </section>
-  <section class="max-w-7xl mx-5 mb-20 mt-20 xl:mx-auto">
+  </Section>
+  <Section>
     <SectionHead title="Asked Questions" titleGreen="Frequently" reverse={true}>
       Still you have any questions? Contact our Team via support@yourbank.com
     </SectionHead>
@@ -113,7 +100,7 @@ import Layout from "../layouts/Layout.astro"
       />
     </div>
     <button
-      class="flex bg-gray/11 py-3 px-5 border border-gray/15 items-center rounded-full gap-2 mx-auto"
+      class="flex bg-gray/11 py-3 px-5 border border-gray/15 items-center rounded-full gap-2 mx-auto mb-20"
       >Load All FAQ's
       <svg
         width="14"
@@ -126,7 +113,7 @@ import Layout from "../layouts/Layout.astro"
         ></path>
       </svg>
     </button>
-  </section>
+  </Section>
   <EndCard/>
   <style>
     .faq::after {

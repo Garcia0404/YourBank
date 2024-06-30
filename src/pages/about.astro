@@ -1,16 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro"
-let ok = false
+import Main from "../components/Main.astro"
+import Section from "../components/Section.astro"
+import SectionHead from "../components/SectionHead.astro"
+import MissionCard from "../components/aboutPage/MissionCard.astro"
+import ReleasesCard from "../components/aboutPage/ReleasesCard.astro"
 ---
 
 <Layout title="About">
-  <main class:list={[
-    "text-white",
-    {
-      'bg-red-600':!ok,
-      'bg-green-600':ok
-    }
-  ]}>
-    Esta es la página del about
-  </main>
+  <Main img="/aboutPage/main/image" title="Where Banking Meets" titleGreen="Excellence!" head={true}>
+    Join our team and embark on a rewarding journey in the banking industry. At YourBank, we are committed to fostering a culture of excellence and providing opportunities for professional growth. With a focus on innovation, customer service, and integrity, we strive to make a positive impact in the lives of our customers and communities. Join us today and be a part of our mission to shape the future of banking.
+  </Main>
+  <Section>
+    <SectionHead titleGreen="Mission & Vision">
+      We envision being a leading force in the industry, driven by innovation, integrity, and inclusivity, creating a brighter financial future for individuals and businesses while maintaining a strong commitment to customer satisfaction and community development.
+    </SectionHead>
+    <div class="grid mt-12 gap-12">
+      <MissionCard img="/aboutPage/misionVision/mission" title="Mission">
+        At YourBank, our mission is to empower our customers to achieve financial
+        success. We are dedicated to delivering innovative banking solutions that
+        cater to their unique needs. Through personalized services, expert
+        guidance, and cutting-edge technology, we aim to build strong, lasting
+        relationships with our customers. Our mission is to be their trusted
+        partner, helping them navigate their financial journey and realize their
+        dreams.
+      </MissionCard>
+      <MissionCard img="/aboutPage/misionVision/vision" title="Vision" reverse={true}>
+        Our vision at YourBank is to redefine banking by creating a seamless and personalized experience for our customers. We envision a future where banking is accessible, transparent, and tailored to individual preferences. Through continuous innovation and collaboration, we strive to be at the forefront of the industry, setting new standards for customer-centric banking. Our vision is to be the preferred financial institution, known for our unwavering commitment to excellence, trust, and customer satisfaction.
+      </MissionCard>
+    </div>
+  </Section>
+  <Section>
+    <SectionHead titleGreen="Press Releases">
+      Stay updated with the latest happenings and exciting developments at YourBank through our press releases.
+    </SectionHead>
+    <div class="grid md:grid-cols-2 mt-12 gap-12 md:gap-4 mb-24">
+      <ReleasesCard title="YourBank Launches New Rewards Program to Enhance Customer Loyalty and Satisfaction" img="/aboutPage/releases/release1" date="06/11/2024">
+        YourBank is pleased to announce the introduction of our new Rewards Program, aimed at rewarding our loyal customers and enhancing their banking experience. The program offers exclusive benefits, discounts, and personalized offers tailored to individual customer preferences. With this initiative, YourBank reaffirms its commitment to delivering exceptional value and building lasting relationships with our valued customers.
+      </ReleasesCard>
+      <ReleasesCard title="YourBank Expands Branch Network with Opening of New Location in Chennai" img="/aboutPage/releases/release2" date="12/11/2024">
+        YourBank is excited to announce the grand opening of our newest branch in [City]. This expansion is a testament to our continued commitment to serving our customers and providing them with convenient access to our comprehensive range of banking services. The new branch will feature state-of-the-art facilities, a team of dedicated professionals, and a personalized approach to banking, further strengthening our presence in the local community.
+      </ReleasesCard>
+      <ReleasesCard title="YourBank Partners with Local Nonprofit to Support Financial Education Initiatives" img="/aboutPage/releases/release3" date="24/12/2024">
+        YourBank is excited to unveil our new Sustainable Banking Initiative, demonstrating our commitment to environmental responsibility. This initiative includes a range of sustainable banking products and services, such as green loans, eco-friendly investment options, and paperless banking solutions. By incorporating sustainable practices into our operations, we aim to contribute to a greener future while providing innovative banking solutions to our customers.
+      </ReleasesCard>
+      <ReleasesCard title="YourBank Launches Sustainable Banking Initiative to Promote Environmental Responsibility" img="/aboutPage/releases/release4" date="28/12/2024">
+        YourBank is excited to unveil our new Sustainable Banking Initiative, demonstrating our commitment to environmental responsibility. This initiative includes a range of sustainable banking products and services, such as green loans, eco-friendly investment options, and paperless banking solutions. By incorporating sustainable practices into our operations, we aim to contribute to a greener future while providing innovative banking solutions to our customers.      </ReleasesCard>
+    </div>
+  </Section>
 </Layout>
