@@ -4,7 +4,7 @@ import { NavMobileButton } from './NavMobileButton'
 interface Props {
   page:string
 }
-const { page } = Astro.props as Props
+const { page='none' } = Astro.props as Props
 ---
 
 <header class="flex items-center bg-gray/11 z-50 rounded-full justify-between px-6 py-3 text-lg border border-gray/15 max-w-7xl mx-5 xl:mx-auto">
@@ -44,8 +44,8 @@ const { page } = Astro.props as Props
     </ul>
   </nav>
   <span class="gap-7 items-center hidden sm:flex">
-    <span>Sign Up</span>
-    <span class="bg-green/60 text-gray/11 px-6 py-2 rounded-full">Login</span>
+    <a href="/signUp">Sign Up</a>
+    <a href="/login" class="bg-green/60 text-gray/11 px-6 py-2 rounded-full">Login</a>
   </span>
   <NavMobileButton client:visible/>
 </header>

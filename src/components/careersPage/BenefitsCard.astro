@@ -6,9 +6,9 @@ interface Props {
 const { svg,title } = Astro.props as Props
 ---
 
-<article class="bg-gray/11 rounded-t-[40px] rounded-b-xl px-5 py-7 lg:p-10 grid gap-5">
+<article class="rounded-tr-[32px] rounded-b-xl px-5 py-7 lg:p-10 grid gap-5 bg-[url('/bg-imageCard.svg')]">
   <div class="flex items-center gap-3">
-    <img src={`/careersPage/sectionBenefits/${svg}.svg`} alt="title">
+    <img src={`${svg}.svg`} alt="title">
     <h3 class="text-2xl">{title}</h3>
   </div>
   <p><slot/></p>
