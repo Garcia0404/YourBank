@@ -4,7 +4,7 @@ export const NavbarMobile = () => {
     <nav id="nav" class="overflow-y-auto items-center p-20 fixed top-0 right-0 h-screen mobile:w-max mobile:min-w-96 w-screen translate-x-full bg-[#262626] z-50 transition-all ease-[cubic-bezier(0.76, 0, 0.24, 1)] duration-500">
       <div class="flex flex-col h-full">
         <img width="100%" height="auto" src="/logo.svg" alt="logo" />
-        <ul class="list-none text-2xl mobile:text-3xl flex flex-col gap-4 mt-16">
+        <ul class="list-none text-xl mobile:text-2xl flex flex-col gap-4 mt-16">
           <li>
             <a href="/" class="flex items-center gap-2">
               <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20V9.5l7-5.288L19 9.5V20h-5.192v-6.384h-3.616V20z" /></svg>
@@ -31,15 +31,15 @@ export const NavbarMobile = () => {
           </li>
         </ul>
         <div class="flex mt-auto pt-8 sm:hidden flex-col mobile:flex-row gap-2 text-xl">
-          <a class="border px-3 py-2 rounded-xl bg-gray/10 hover:bg-gray/15 w-max">Sign Up</a>
-          <a class="border border-gray/11 bg-green/60 rounded-xl px-3 py-2 text-gray/10 w-max">Login</a>
+          <a href='/signUp' class="px-5 py-2 rounded-xl bg-gray/10 hover:bg-gray/15 w-max">Sign Up</a>
+          <a href='/login' class="bg-green/60 rounded-xl px-5 py-2 text-gray/10 w-max">Login</a>
         </div>
       </div>
       <button onClick={() => {
         const nav = document.getElementById('nav')
         nav.classList.add('translate-x-full')
       }} class="text-[#f2f2f2] z-20 absolute top-0 right-0 p-6">
-        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-gray/70" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-gray/70" width="35" height="35" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M18 6l-12 12" />
           <path d="M6 6l12 12" />
