@@ -31,8 +31,8 @@ export const NavbarMobile = () => {
           </li>
         </ul>
         <div class="flex mt-auto pt-8 sm:hidden flex-col mobile:flex-row gap-2 text-xl">
-          <button class="border px-3 py-2 rounded-xl bg-gray/10 hover:bg-gray/15 w-max">Sign Up</button>
-          <button class="border border-gray/11 bg-green/60 rounded-xl px-3 py-2 text-gray/10 w-max">Login</button>
+          <a class="border px-3 py-2 rounded-xl bg-gray/10 hover:bg-gray/15 w-max">Sign Up</a>
+          <a class="border border-gray/11 bg-green/60 rounded-xl px-3 py-2 text-gray/10 w-max">Login</a>
         </div>
       </div>
       <button onClick={() => {

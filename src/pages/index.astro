@@ -5,6 +5,7 @@ import FAQCard from "../components/FAQCard.astro";
 import Layout from "../layouts/Layout.astro";
 import TestimonialsCard from "../components/TestimonialsCard.astro";
 import EndCard from "../components/EndCard.astro";
+import OurTestimonials from "../components/OurTestimonials.astro";
 ---
 
 <Layout title="YourBank">
@@ -265,148 +266,7 @@ import EndCard from "../components/EndCard.astro";
       </svg>
     </button>
   </section>
-  <section class="mb-12 lg:mb-24 max-w-7xl mx-auto px-5">
-    <div
-      class="flex mb-12 lg:mg-24 flex-col lg:flex-row gap-6 lg:gap-32 items-center lg:mb-20 sm:items-start"
-    >
-      <div class="text-center sm:text-start">
-        <h2 class="text-3xl mobile:text-4xl font-medium text-balance mb-3">
-          <span>Our</span>
-          <span class="text-green/60">Testimonials</span>
-        </h2>
-        <p>
-          Discover how YourBank has transformed lives with innovative digital
-          solutions and personalized customer service. See why our clients trust
-          us for a secure and prosperous financial journey.
-        </p>
-      </div>
-      <div
-        class="bg-gray/11 border border-gray/15 rounded-full p-3 flex h-min w-max my-auto"
-      >
-        <button
-          class="bg-green/60 px-3 mobile:px-5 py-2 rounded-full sm:text-lg text-gray/11 font-normal whitespace-nowrap"
-          >For Individuals</button
-        >
-        <button
-          class="px-3 mobile:px-5 py-2 rounded-full sm:text-lg font-normal whitespace-nowrap"
-          >For Businesses</button
-        >
-      </div>
-    </div>
-    <div class="relative">
-      <button aria-label="previous" class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 z-10">
-        <svg
-          width="62"
-          height="62"
-          viewBox="0 0 62 62"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="0.5" y="0.5" width="61" height="61" rx="30.5" fill="#1C1C1C"
-          ></rect>
-          <rect
-            x="0.5"
-            y="0.5"
-            width="61"
-            height="61"
-            rx="30.5"
-            stroke="#262626"></rect>
-          <path
-            d="M40.2083 31H22.5M22.5 31L31 22.5M22.5 31L31 39.5"
-            stroke="#CAFF33"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-      </button>
-      <div
-        class="grid lg:grid-cols-3 gap-4 testimonials relative md:px-16"
-      >
-        <TestimonialsCard
-          hidden={true}
-          nam="Sara T"
-          description="YourBank has been my trusted financial partner for years. Their personalized service and innovative digital banking solutions have made managing my finances a breeze."
-        />
-        <TestimonialsCard
-          hidden={false}
-          nam="John D"
-          description="I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable."
-        />
-        <TestimonialsCard
-          hidden={true}
-          nam="Emily G"
-          description="I love the convenience of YourBank's mobile banking app. It allows me to stay on top of my finances and make transactions on the go. The app is user-friendly and secure, giving me peace of mind."
-        />
-      </div>
-      <button aria-label="next" class="hidden lg:block absolute right-0 top-1/2 z-10 -translate-y-1/2">
-        <svg
-          width="62"
-          height="62"
-          viewBox="0 0 62 62"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="0.5" y="0.5" width="61" height="61" rx="30.5" fill="#1C1C1C"
-          ></rect>
-          <rect x="0.5" y="0.5" width="61" height="61" rx="30.5" stroke="#262626"
-          ></rect>
-          <path
-            d="M22.5002 31H40.2085M40.2085 31L31.7085 22.5M40.2085 31L31.7085 39.5"
-            stroke="#CAFF33"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-      </button>
-      <div class="flex gap-4 justify-center mt-8 lg:hidden">
-        <button aria-label="previous">
-          <svg
-            width="62"
-            height="62"
-            viewBox="0 0 62 62"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="0.5" y="0.5" width="61" height="61" rx="30.5" fill="#1C1C1C"
-            ></rect>
-            <rect
-              x="0.5"
-              y="0.5"
-              width="61"
-              height="61"
-              rx="30.5"
-              stroke="#262626"></rect>
-            <path
-              d="M40.2083 31H22.5M22.5 31L31 22.5M22.5 31L31 39.5"
-              stroke="#CAFF33"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
-        </button>
-        <button aria-label="next">
-          <svg
-            width="62"
-            height="62"
-            viewBox="0 0 62 62"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="0.5" y="0.5" width="61" height="61" rx="30.5" fill="#1C1C1C"
-            ></rect>
-            <rect x="0.5" y="0.5" width="61" height="61" rx="30.5" stroke="#262626"
-            ></rect>
-            <path
-              d="M22.5002 31H40.2085M40.2085 31L31.7085 22.5M40.2085 31L31.7085 39.5"
-              stroke="#CAFF33"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
+  <OurTestimonials/>
   <EndCard/>
   <style>
     .faq::after {
@@ -418,38 +278,6 @@ import EndCard from "../components/EndCard.astro";
       height: 300px;
       background: linear-gradient(
         to top,
-        rgb(25, 25, 25),
-        rgba(25, 25, 25, 0.2)
-      );
-    }
-    .testimonials::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 100%;
-      background: linear-gradient(
-        to right,
-        rgb(25, 25, 25),
-        rgba(25, 25, 25, 0.2)
-      );
-    }
-    @media (width>750px) {
-      .testimonials::after {
-        content: "";
-      }
-      .testimonials::before {
-        content: '';
-      }
-    }
-    .testimonials::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 300px;
-      height: 100%;
-      background: linear-gradient(
-        to left,
         rgb(25, 25, 25),
         rgba(25, 25, 25, 0.2)
       );
