@@ -1,7 +1,7 @@
 
 export const NavbarMobile = () => {
   return (
-    <nav id="nav" class="overflow-y-auto items-center p-20 fixed top-0 right-0 h-screen mobile:w-max mobile:min-w-96 w-screen translate-x-full bg-[#262626] z-50 transition-all ease-[cubic-bezier(0.76, 0, 0.24, 1)] duration-500">
+    <nav id="nav" class="overflow-y-auto items-center p-20 fixed top-0 right-0 h-screen mobile:w-max translate-x-full bg-[#262626] z-50 transition-all ease-[cubic-bezier(0.76, 0, 0.24, 1)] duration-500">
       <div class="flex flex-col h-full">
         <img width="100%" height="auto" src="/logo.svg" alt="logo" />
         <ul class="list-none text-xl mobile:text-2xl flex flex-col gap-4 mt-16">
@@ -30,9 +30,9 @@ export const NavbarMobile = () => {
             </a>
           </li>
         </ul>
-        <div class="flex mt-auto pt-8 sm:hidden flex-col mobile:flex-row gap-2 text-xl">
-          <a href='/signUp' class="px-5 py-2 rounded-xl bg-gray/10 hover:bg-gray/15 w-max">Sign Up</a>
-          <a href='/login' class="bg-green/60 rounded-xl px-5 py-2 text-gray/10 w-max">Login</a>
+        <div class="flex mt-auto pt-8 sm:hidden mobile:flex-row gap-2 text-lg">
+          <a href='/signUp' class="px-3 py-2 rounded-xl bg-gray/10 hover:bg-gray/15 w-max">Sign Up</a>
+          <a href='/login' class="bg-green/60 rounded-xl px-3 py-2 text-gray/10 w-max">Login</a>
         </div>
       </div>
       <button onClick={() => {

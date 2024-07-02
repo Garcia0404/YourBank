@@ -1,7 +1,52 @@
 ---
+import OurTestimonials from "../components/OurTestimonials.astro";
+import SesionCard from "../components/SesionCard.astro";
 import Layout from "../layouts/Layout.astro";
+import InputPassword from "../components/loginPage/InputPassword.astro";
 ---
 
 <Layout title="Sign Up">
-  SignUp
+  <SesionCard
+    title="Sign Up"
+    text="Join our community today! Create an account to unlock exclusive features and personalized experiences."
+  >
+    <form
+      class="grid justify-center min-[800px]:grid-cols-2 mt-14 gap-4 items-center mb-8"
+    >
+      <div class="w-full smTablet:w-max ms-auto">
+        <label for="firstName">
+          <input
+            class="bg-gray/10 border border-gray/15 rounded-[32px] py-4 px-5 w-full smTablet:w-80"
+            type="text"
+            id="firstName"
+            placeholder="Enter First Name"
+          />
+        </label>
+      </div>
+      <div class="w-full smTablet:w-max">
+        <label for="lastName">
+          <input
+            class="bg-gray/10 border border-gray/15 rounded-[32px] py-4 px-5 w-full smTablet:w-80"
+            type="text"
+            id="lastName"
+            placeholder="Enter Last Name"
+          />
+        </label>
+      </div>
+      <div class="w-full smTablet:w-max ms-auto">
+        <label for="email">
+          <input
+            class="bg-gray/10 border border-gray/15 rounded-[32px] py-4 px-5 w-full smTablet:w-80"
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+          />
+        </label>
+      </div>
+      <div class="smTablet:w-max relative w-full">
+        <InputPassword />
+      </div>
+    </form>
+  </SesionCard>
+  <OurTestimonials />
 </Layout>
